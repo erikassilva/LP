@@ -1,0 +1,20 @@
+//Uma pessoa está obesa se seu IMC (peso dividido pela altura ao quadrado) é superior a 30. Dados o peso e a altura de uma pessoa, informe se ela está obesa
+
+#include <iostream>
+#include <stdio.h> //Std = standard e io=input e output*?
+#include <math.h> //funções matemáticas
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(void) {
+	float peso, altura, imc;
+	printf("Qual o peso e a altura? ");
+	scanf("%f %f", &peso, &altura); //& somente se coloca na leitura, indica onde será guardado na memória. Um tipo ponteiro. O %f pode se colocar na entrada e na saída
+	imc = peso/pow(altura,2);
+	printf("O seu peso e %.1f e a sua altura e %.1f\n", peso, altura);
+	printf("IMC = %.1f\n",imc);
+	if (imc <=30) printf("Parabéns, continue assim!\n");
+	else printf("Precisa mudar de vida, assim o coracao nao guenta!\n");
+	return 0;
+}
+//Salvar com extensão C
