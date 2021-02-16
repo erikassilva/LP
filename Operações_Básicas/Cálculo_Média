@@ -1,0 +1,11 @@
+//Exercicio 7 - dada as duas notas de prova de um aluno, informe a sua média
+
+#include <stdio.h>
+int main(){
+	float a, b;
+	printf("Digite a 1a e a 2a nota: ");
+	scanf("%f %f", &a, &b);
+	float media = (a+b)/2;
+	printf("A media do aluno e %.2f\n", media);
+	return 0;
+}

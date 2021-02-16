@@ -1,0 +1,30 @@
+//Identificar os erros no código abaixo
+
+//#include <stdio.h>
+
+/*PERIM.C - calcula o perímetro da circunferência/*
+
+/*Main (){
+	
+	float raio;
+	printf("qual o raio? "); /* solicita o raio 
+	scanf("%f", &raio); 	da circunferência*/
+//	float perim = 2*3.14*raio; /* calculo o perímetro */
+//	printf("Perimetro = %f\n", perim)
+//	return;
+//}
+
+//Correção do código acima
+#include <stdio.h>
+
+/*PERIM.C - calcula o perímetro da circunferência*/ //ajustada
+
+int main (){ //ajustada
+	
+	float raio;
+	printf("qual o raio? "); /* solicita o raio da circunferência*/ //Ajustada
+	scanf("%f", &raio); //ajustada	
+	float perim = 2*3.14*raio; /* calculo o perímetro */
+	printf("Perimetro = %.2f\n", perim); //ajustada
+	return 0; //ajustada
+}
