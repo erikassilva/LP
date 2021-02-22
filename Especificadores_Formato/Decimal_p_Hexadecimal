@@ -1,0 +1,11 @@
+//Conversão de base decimal para base hexadecimal
+
+#include <stdio.h>
+
+int main (void){
+	int n;
+	printf("Decimal? ");
+	scanf("%d", &n);
+	printf("Hexadecimal= %X\n", n);
+	return 0;
+}
