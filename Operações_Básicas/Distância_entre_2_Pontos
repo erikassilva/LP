@@ -1,0 +1,15 @@
+//Exercicio 10 - Dada as coordenadas (xp, yp) e (xq, yq), de dois pontos P e Q no plano cartesiano, exiba a distância entre eles. [Dica: use o teorema de Pitágoras].
+
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+	int x1, x2, y1, y2;
+	printf("Digite as primeiras coordenadas: ");
+	scanf("%i %i", &x1, &y1);
+	printf("Digite as segundas coordenadas: ");
+	scanf("%i %i", &x2, &y2);
+	float distancia = sqrt(pow((x2-x1),2) + pow((y2-y1),2));
+	printf("A distancia entre dois pontos eh %.2f", distancia);
+	return 0;
+}

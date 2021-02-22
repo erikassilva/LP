@@ -1,0 +1,11 @@
+//Exercicio 8 - Dada uma distância percorrida em quilômetros, e o total do litro de combustível gasto para percorrê-la, informe o consumo médio do veículo.
+
+#include <stdio.h>
+int main (){
+	float km, litros, cmv;
+	printf("Digite a distancia percorrida e o total de litros de combustivel: ");
+	scanf("%f %f", &km, &litros);
+	cmv = km/litros;
+	printf("O consumo medio do veiculo com %.2f Km e consumo de combustivel de %.2f litros eh %.2f", km, litros, cmv);
+	return 0;
+}
