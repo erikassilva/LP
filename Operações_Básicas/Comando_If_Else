@@ -1,0 +1,12 @@
+//Comando if-else
+
+#include <stdio.h>
+
+int main (void){
+	int idade;
+	printf("Idade? ");
+	scanf("%d", &idade);
+	if (idade <= 18) puts ("Menor"); //a função puts (), declarada em stdio.h exibe uma cadeia (string) e muda o cursor de linha
+	else puts ("Maior");
+	return 0;
+}

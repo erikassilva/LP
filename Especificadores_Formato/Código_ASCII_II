@@ -1,0 +1,13 @@
+//Código ASCII - Altere o programa para ler um código ASCII em decimal e exibir o caractere correspondente 
+
+#include <stdio.h>
+
+int main(void){
+	char n;
+	printf("Decimal? ");
+	scanf("%d", &n);
+	printf("ASCII em caractere= %c\n", n);
+	printf("ASCII em octal= %o\n", n);
+	printf("ASCII em hexadecimal= %X\n", n);
+	return 0;
+}
