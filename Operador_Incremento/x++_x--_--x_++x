@@ -1,0 +1,25 @@
+/*Operador de incremento x++ / x-- = posfixa ++x / --x = prefixa expressão x= x+1*/
+
+//Exercicio I
+#include <stdio.h>
+int main (void){
+	int x=5, y=5;
+	printf("x= %d\n", x);
+	++x; //6
+	printf("y= %d\n", y);
+	y--; //4
+	printf("x= %d y=%d\n", x, y);
+	return 0;
+}
+
+//Exercicio II
+#include <stdio.h>
+int main (void){
+	int x=5, y=5;
+	printf("x= %d\n", x);
+	x++; //6
+	printf("y= %d\n", y);
+	--y; //4
+	printf("x= %d y=%d\n", x, y);
+	return 0;
+}

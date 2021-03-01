@@ -1,0 +1,27 @@
+//Exercicio I
+
+#include <stdio.h>
+
+int main(void){
+	int x=5,y, z;
+	y= ++x + 2; //++x muda valor antes de fazer a expressão
+	printf("x= %d\n", x);
+	z= x-- + 2; //x-- não faz a operação nesta etapa, apenas na operação subsequente, neste caso a variável recebe o resultado de x anterior = 6 e soma 2.Somente depois que faz a operação que mudam os valores
+	printf("x= %d\n", x);
+	printf("x= %d -> y= %d -> z= %d", x,y,z);
+	return 0;
+}
+
+//Exercicio II
+
+#include <stdio.h>
+
+int main(void){
+	int x=5,y, z;
+	y= x++ + 2; 
+	printf("x= %d\n", x);
+	z= --x + 2; 
+	printf("x= %d\n", x);
+	printf("x= %d -> y= %d -> z= %d", x,y,z);
+	return 0;
+}
