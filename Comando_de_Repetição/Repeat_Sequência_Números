@@ -1,0 +1,14 @@
+//Exibir a soma de uma sequencia de numeros terminada com 0.
+
+#include <stdio.h>
+
+int main (void){
+	int s=0, n;
+	do{
+		printf("numero? ");
+		scanf("%d", &n);
+		s += n;
+	} while (n!=0);
+	printf("soma= %d", s);
+	return 0;
+}
