@@ -10,6 +10,8 @@ int main (void){
 	do{
 		printf("Chute entre 1 e 7: " );
 		scanf("%d", &c);
+		printf("Chute= %d\n", c);
+		printf("Numero aleatorio= %d\n", n);
 		if (c > n) puts ("Muito Alto");
 		else if (c<n) puts ("Muito Baixo");
 		else puts ("Voce acertou!");
