@@ -1,0 +1,14 @@
+//Verificar se um dado numero natural é primo
+
+#include <stdio.h>
+
+int main (void){
+	int n, d;
+	printf("Numero? ");
+	scanf("%d", &n);
+	for (d=2; d<=n-1; d++)
+		if (n%d==0) break;
+	if (d==n) puts ("Eh primo!");
+	else puts ("Nao eh primo!");
+	return 0;
+}
