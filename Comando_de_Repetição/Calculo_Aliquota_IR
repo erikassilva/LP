@@ -1,0 +1,46 @@
+Dado o salario de um funcionario, informe o valor do imposto de renda a ser recolhido. Considere as alíquotas na tabela ao lado
+
+#include <stdio.h>
+
+int main (void){
+	float sal=0, aliquota, salliquido;
+	char r;
+
+	while (1){
+		do{
+			printf("Digite o salario do funcionario: ");
+			scanf("%f", &sal);	
+		}
+		while (sal <= 0);
+			if (sal <= 1903.98){
+				printf("IR a ser recolhido= Isento e Salario Liquido= %.2f\n", sal);
+			}
+			else if (sal <= 2826.65){
+				aliquota = sal*(7.5/100);
+				salliquido = sal - aliquota;
+				printf("IR a ser recolhido= %.2f e Salario Liquido= %.2f\n", aliquota, salliquido);
+			}
+			else if (sal <= 3751.05){
+				aliquota = sal*(15.00/100);
+				salliquido = sal - aliquota;
+				printf("IR a ser recolhido= %.2f e Salario Liquido= %.2f\n", aliquota, salliquido);
+			}
+			else if (sal <= 4664.68){
+				aliquota = sal*(22.5/100);
+				salliquido = sal - aliquota;
+				printf("IR a ser recolhido= %.2f e Salario Liquido= %.2f\n", aliquota, salliquido);
+			}
+			else {
+				aliquota = sal*(27.5/100);
+				salliquido = sal - aliquota;
+				printf("IR a ser recolhido= %.2f e Salario Liquido= %.2f\n", aliquota, salliquido);
+			}
+		printf("Deseja continuar [S/N]\n ");
+		r = getch();
+		if (r == 's')
+			continue;
+		else break;
+	}
+	
+	return 0;
+}
