@@ -1,0 +1,45 @@
+/*Para um numero nao determinado de nadadores. Dada a idade de um nadador classifica-o em uma das seguintes categorias:
+infantil A = 5 - 7 anos
+infantil B = 8 - 10 anos
+juvenil A = 11 - 13 anos
+juvenil B = 14 - 17 anos
+adulto = maiores de 18 anos */
+
+#include <stdio.h>
+#define infA 7
+#define infB 10
+#define juvA 13
+#define juvB 17
+#define adulto 18
+
+int main (void){
+	
+	int idade;
+	char r;
+	
+	while (1){
+		do
+		{
+			printf("Digite a idade do nadador: ");
+			scanf("%d", &idade);
+		}while (idade < 5);
+		printf("Idade do Nadador: %d\n", idade);
+		
+		if (idade <= infA)
+			printf("Categoria infantil A\n");
+		else if (idade <= infB)
+			printf("Categoria infantil B\n");
+		else if (idade <= juvA)
+			printf("Categoria juvenil A\n");
+		else if (idade <= juvB)
+			printf("Categoria juvenil B\n");
+		else
+			printf("Adulto = maiores de 18 anos\n");	
+		printf("Deseja continuar [S/N]? \n ");
+		r = getch();
+		if (toupper(r)== 'S')
+			continue;
+		else break;
+	}
+	return 0;	
+}
