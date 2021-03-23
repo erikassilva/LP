@@ -1,0 +1,54 @@
+//Ex. Verificar se um candidato está apto para doar sangue
+
+/*#include <stdio.h>
+#define idade1 16 //entre 16 e 69
+#define idade2 69 //entre 16 e 69
+#define peso1 50 //pesar pelo menos 50kg 
+#define apto1 "Sim"
+#define apto2 "Nao"
+#define resp1 'S'
+#define resp2 'N'
+
+int main (void){
+	
+	char nome[30], alimentado, resfriado, resp;
+	int idade;
+	float peso;
+	
+	while (1){
+		printf("Informe seu nome completo: ");
+		gets(nome);
+		printf("Informe sua idade: ");
+		scanf ("%d", &idade);
+		printf("Informe seu peso: ");
+		scanf("%f", &peso);
+		printf("Esta bem alimentado [S/N]? ");
+		alimentado = getch();
+		alimentado = toupper(alimentado);
+		printf("Esta resfriado [S/N]? ");
+		resfriado = getch();
+		resfriado = toupper(resfriado);
+		
+		printf("Nome completo= %s\n", nome);
+		printf("\nIdade= %d\n", idade);
+		printf("Peso= %.2f\n", peso);	
+		printf("Bem Alimentado= %c\n", alimentado);
+		printf("Resfriado= %c\n", resfriado);
+		
+	
+		if (idade >= idade1 && idade <= idade2 && peso >= peso1 && resfriado == resp2 && alimentado == resp1)
+			printf("\nApto para doacao= %s\n", apto1);		
+		else
+			printf("\nApto para doacao= %s\n", apto2);
+	
+		printf("Deseja continuar [S/N]? ");
+		resp = getch();
+		resp = toupper(resp);
+		if (resp == 'S')
+			continue;
+		else
+			break;
+	}
+	
+	return 0;
+}*/
