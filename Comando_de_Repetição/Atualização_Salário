@@ -1,0 +1,55 @@
+//Ex. atualização do salário dos funcionários sendo: cargo 1 = 7%, cargo 2 = 9%, cargo 3 = 5%, cargo 4 = 12%
+
+#include <stdio.h>
+#define r1 7/100
+#define r2 9/100
+#define r3 5/100
+#define r4 12/100
+
+int main(void){
+	
+	float salAtual, reajuste, novoSal; 
+	int cargo;
+	char c, resp;
+
+	while (1){	
+		printf("Digite o salario atual: ");
+		scanf("%f", &salAtual);
+		printf("Digite o cargo: ");
+		scanf("%i", &cargo);
+		switch(cargo){	
+			case 1:
+				reajuste = salAtual * r1;
+				novoSal = salAtual + reajuste;
+				break;
+			case 2:
+				reajuste = salAtual * r2;
+				novoSal = salAtual + reajuste;
+				break;
+			case 3:
+				reajuste = salAtual * r3;
+				novoSal = salAtual + reajuste;
+				break;
+			case 4:
+				reajuste = salAtual * r4;
+				novoSal = salAtual + reajuste;
+				break;
+			default:
+				printf("cargo nao existe!\n");
+				break;					
+		}
+		printf("Cargo= %d\n", cargo);
+		printf("Salario Atual= %.2f\n", salAtual);
+		printf("Reajuste= %.2f\n", reajuste);
+		printf("Novo Salario= %.2f\n", novoSal);
+		
+		printf("Deseja continuar[S/N]? \n");
+		resp = getch();
+		resp = toupper(resp);
+		if (resp == 'S')
+			continue;
+		else
+			break;
+	}
+	return 0;
+}
