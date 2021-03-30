@@ -1,0 +1,37 @@
+/* Faça um programa que, para um número indeterminado de pessoas: 
+leia a idade de cada uma, sendo que a idade 0 (zero) indica o fim da leitura e não 
+deve ser considerada. A seguir calcule: • o número de pessoas; • a idade média do 
+grupo; • a menor idade e a maior idade.*/
+
+#include <stdio.h>
+
+int main (void){
+	
+	int idade, menor, maior, count=0;
+	float sum=0, media;
+	
+	while (idade > 0){
+		printf("Digite a sua idade: ");
+		scanf("%d", &idade);
+		
+		if (idade > 0){
+			sum += idade;	
+			count ++;
+			media = sum / count;
+			if (count == 1){
+				menor = idade;
+				maior = idade;
+			} 
+			if (idade < menor)
+				menor = idade;
+			if (idade > maior)
+				maior = idade;
+		}
+	}
+	printf("Numero de pessoas= %d\n", count);
+	printf("Idade media do grupo= %.2f\n", media);
+	printf("Menor idade= %d\n", menor);
+	printf("Maior idade= %d\n", maior);
+	
+	return 0;
+}
