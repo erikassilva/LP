@@ -1,0 +1,74 @@
+/*Uma empresa de abastecimento necessita de um sistema de controle de estoque de seus produtos. Neste primeiro momento, quer o controle de estoque de um de seus produtos mais procurados.A empresa fornece os seguintes dados do produto: CÓDIGO, DESCRIÇÃO, PREÇO, QUANTIDADE EM ESTOQUE. FRETE. Os clientes compram via internet o determinado produto. Fornecendo o código do produto e a quantidade a comprar, nome do cliente e endereço de entrega do produto. O código deve fazer a leitura dos dados fornecidos pela empresa. Ler para um número não determinado de clientes, os dados solicitados no início da sua compra. Verificar se existe quantidade em estoque para atender o pedido, se houver, calcular a quantidade a pagar, incluído o frete e mostrar para cada cliente atendido os dados do cliente e os dados do produto comprado e o valor a pagar sem frete e com frete, atualizar o estoque. Quando o estoque não for suficiente para atender o pedido, mostrar a mensagem Pedido Não pode ser atendido. Enviar uma mensagem ao responsável pelo controle do estoque quando o estoque for zero para que providencie o produto em falta e atualizar a quantidade de estoque após reposição do estoque para poder atender ao cliente.*/
+
+#include <stdio.h>
+
+int main(void){
+	
+	int codcli, codempr, qtestoque, qtcliente,resp, sdoestoque=0;
+	char descricao[40], nome[30], endereco[40];
+	float preco, frete, vrsfrete, vrcfrete;
+	
+	//Leitura do dos dados fornecidos pela empresa
+	
+	printf("-----Leitura dos dados da Empresa-----\n");
+	printf("Informe o codigo do produto: ");
+	scanf("%d", &codempr);
+	setbuf(stdin, NULL);
+	printf("Informe a descricao do produto: ");
+	fgets(descricao, 30, stdin);
+	printf("Informe o preco do produto: ");
+	scanf("%f", &preco);
+	printf("Informe a quantidade em estoque: ");
+	scanf("%d", &qtestoque);
+	printf("Informe o valor do frete: ");
+	scanf("%f", &frete);
+	
+	while (1){
+		//Leitura dos dados do cliente
+		
+		printf("\n-----Leitura dos dados do Cliente-----\n");
+		printf("Informe o codigo do produto: ");
+		scanf("%d", &codcli);
+		if (codcli == codempr){
+			printf("Informe a quantidade desejada: ");
+			scanf("%d", &qtcliente);
+			if (qtestoque >= qtcliente){
+				setbuf(stdin, NULL);
+				printf("Informe seu nome: ");
+				fgets(nome, 30, stdin);
+				setbuf(stdin, NULL);
+				printf("Informe seu endereco de entrega: ");
+				fgets(endereco, 40, stdin);
+				vrsfrete = qtcliente * preco;
+				vrcfrete = vrsfrete + frete;
+				printf("\nCodigo do produto: %d\n", codcli);
+				printf("Descricao do produto: %s\n", descricao);
+				printf("Quantidade comprada: %d\n", qtcliente);
+				printf("Valor do produto sem frete = %.2f\n", vrsfrete);
+				printf("Valor do Frete = %.2f\n", frete);
+				printf("Valor total com frete = %.2f\n", vrcfrete);
+				qtestoque -= qtcliente;
+				}
+			else{
+			printf("\nPedido nao pode ser atendido!\n");
+			printf("saldo estoque= %d\n", qtestoque);
+			}
+		}
+		else
+			printf("Produto nao existe para o codigo informado\n");
+										
+		do{
+			printf("\nDeseja continuar [1-Sim/2-Nao] ");
+			scanf("%d", &resp);
+		}while (resp != 1 && resp != 2);
+		if (resp == 1)
+			continue;
+		else
+			break;	
+	}	
+	if (qtestoque == 0)
+		printf("\nEstoque zerado, por favor providenciar a compra!\n");
+		
+	
+	return 0;
+}
