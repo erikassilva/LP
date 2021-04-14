@@ -1,0 +1,26 @@
+//1. Escreva um programa em C que lê 15 valores reais, encontra o maior e o menor deles e mostra o resultado.
+
+int main (void){
+	
+	float n, maior, menor;
+	int i=0, count=0;
+	
+	while (i<15){
+		printf("Digite 15 numeros: ");
+		scanf("%f", &n);
+		i ++;
+			
+		if (i == 1){
+			menor = n;
+			maior = n;
+		}
+		if (n < menor)
+			menor = n;
+		if (n > maior)
+			maior = n;
+	}
+	printf("Maior = %.2f\n", maior);
+	printf("Menor = %.2f\n", menor);	
+	
+	return 0;
+}
