@@ -1,0 +1,19 @@
+/*10. Codifique um programa para ler a nota da prova de 15 alunos e armazene num vetor, 
+calcule e imprima a média geral*/
+
+#include <stdio.h>
+#define tam 15
+
+int main(){
+	
+	int i, v[tam], media, soma=0;
+	
+	for (i=0; i<tam; i++){
+		printf("Digite as medias: ");
+		scanf("%d", &v[i]);
+		soma += v[i];
+	}
+	printf("media geral= %d\n", soma/tam);
+	
+	return 0;
+}

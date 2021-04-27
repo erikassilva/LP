@@ -1,0 +1,28 @@
+/*6. Codifique um programa que receba do usuário um vetor com 10 posições. Em seguida 
+deverá ser impresso o maior e o menor elemento do vetor.*/
+
+#include <stdio.h>
+#define tam 10
+
+int main(){
+	
+	int i, v[tam], menor, maior;
+	
+	for (i=0; i<tam; i++){
+		scanf("%d", &v[i]);
+		if 	(v[i]==0){
+			maior = v[i];
+			menor = v[i];
+		}
+		if (v[i] > maior){
+			maior = v[i];
+		}
+		if (v[i] < menor){
+			menor = v[i];
+		}
+	}
+	printf("Maior = %d\n", maior);
+	printf("Maior = %d\n", menor);
+		
+	return 0;
+}

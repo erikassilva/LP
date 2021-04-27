@@ -1,0 +1,32 @@
+/*3. Ler um conjunto de números reais, armazenando-o em vetor e calcular o quadrado dos
+componentes deste vetor, armazenando o resultado em outro vetor. O conjunto possui 10 
+elementos cada. Imprimir todos os conjuntos.*/
+
+#include <stdio.h>
+#include <math.h>
+#define tam 10
+
+int main(){
+	
+	float v1[tam], v2[tam];
+	int i;
+	
+	for (i=0; i < tam; i++){
+		scanf("%f", &v1[i]);	
+	}
+	for (i=0; i < tam; i++){
+		v2[i] = pow(v1[i], 2);
+	}
+	printf("Vetor de entrada\n");
+	for (i=0; i < tam; i++){
+		printf("%.2f ", v1[i]);	
+	}
+	printf("\n");
+	printf("Vetor elevado ao quadrado\n");
+	for (i=0; i < tam; i++){
+		printf("%.2f ^ 2 = %.2f\n", v1[i], v2[i]);  
+	}
+
+	return 0;
+}
+

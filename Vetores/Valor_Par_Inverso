@@ -1,0 +1,21 @@
+/*9. Crie um programa que lê 6 valores inteiros pares e, em seguida, mostre na tela os valores 
+lidos na ordem inversa*/
+
+#include <stdio.h>
+#define tam 6
+
+int main(){
+	
+	int v[tam], par[tam], i;
+	
+	for (i=0; i< tam; i++){
+		do{
+			scanf("%d", &v[i]);
+		}while (v[i]%2 != 0);
+	}
+	for (i=tam-1; i >= 0; i--){
+		printf("%d ", v[i]);
+	}
+	
+	return 0;
+}

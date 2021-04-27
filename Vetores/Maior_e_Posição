@@ -1,0 +1,25 @@
+/*7. Escreva um programa que leia 10 números inteiros e os armazene em um vetor. Imprima o 
+vetor, o maior elemento e a posição que ele se encontra.*/
+	
+#include <stdio.h>
+#define tam 10
+
+int main(){
+	
+	int i, v[tam], maior=0, pos;
+	
+	for (i=0; i<tam; i++){
+		scanf("%d", &v[i]);
+		if 	(v[i]==0){
+			maior = v[i];
+		}
+		if (v[i] > maior){
+			maior = v[i];
+			pos = i;
+		}		
+	}
+	printf("Maior = %d\n", maior);
+	printf("Posicao = %d\n", pos);
+			
+	return 0;
+}
