@@ -1,0 +1,46 @@
+/*5. Leia uma matriz 5 x 5. Leia também um valor X. O programa deverá fazer uma busca desse 
+valor na matriz e, ao final, escrever a localização (linha e coluna) ou uma mensagem de “nao 
+encontrado”*/
+
+#include <stdio.h>
+#include <time.h>
+
+#define tam 5
+
+int main(){
+	
+	srand(time(NULL));
+	
+	int m[tam][tam], l, c, x, ll, cc, b = 0;
+	
+	printf("Digite um numero: ");
+	scanf("%d", &x);
+	
+	for (l=0; l<tam; l++){
+		for (c=0; c<tam; c++){
+			m[l][c]= rand()%100;
+		}
+	}
+	for (l=0; l<tam; l++){
+		for (c=0; c<tam; c++){
+			printf("%d ", m[l][c]);
+		}
+		printf("\n");
+	}
+		
+	for (l=0; l<tam; l++){
+		for (c=0; c<tam; c++){
+			if (m[l][c] == x){
+				b = 1;
+				ll = l;
+				cc = c;
+			}
+		}
+	}
+	if (b == 1)
+		printf("O valor de x eh %d linha %d coluna %d\n", x, ll, cc);	
+	else
+		printf("valor nao encontrado");	
+	
+	return 0;
+}
