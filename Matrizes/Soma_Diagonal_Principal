@@ -1,0 +1,35 @@
+/*10. Leia uma matriz de 3 x 3 elementos. Calcule a soma dos elementos que estão na diagonal 
+principal*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define tam 3
+
+int main(){
+	
+	srand(time(NULL));
+	
+	int m[tam][tam], l, c, soma=0;
+	
+	for (l=0; l<tam; l++){
+		for (c=0; c<tam; c++){
+			m[l][c] = rand()%10;
+			if (l == c)
+				soma += m[l][c];
+		}
+	}
+	
+	for (l=0; l<tam; l++){
+		for (c=0; c<tam; c++){
+			printf("%d\t", m[l][c]);
+		}
+		printf("\n");
+	}
+	printf("\n");
+	
+	printf("A soma dos elementos da diagonal principal eh %d ", soma);	
+	
+	return 0;
+}
