@@ -1,0 +1,43 @@
+/* 4. Leia uma matriz 4 x 4, imprima a matriz e retorne a localização (linha e a coluna) do maior 
+valor. */
+
+#include <stdio.h>
+
+#define tam 4
+
+int main(){
+	
+	int m[tam][tam], l, c, maior=0, count=0, ll, cc;
+	
+	for (l=0; l< tam; l++){
+		for (c=0; c<tam; c++){
+			scanf("%d", &m[l][c]);
+			count ++;
+		}
+		printf("\n");
+	}
+	
+	for (l=0; l< tam; l++){
+		for (c=0; c<tam; c++){
+			printf("%d ", m[l][c]);
+		}
+		printf("\n");
+	}
+	for (l=0; l< tam; l++){
+		for (c=0; c<tam; c++){
+			if (count==0)
+				maior = count;	
+							
+			if (m[l][c] > maior){
+				maior = m[l][c];
+				ll = l+1;
+				cc = c+1;
+			}
+		}
+		printf("\n");
+	}
+	printf("O maior eh %d\n", maior);
+	printf("A localizacao eh %d %d", ll, cc);
+	
+	return 0;
+}

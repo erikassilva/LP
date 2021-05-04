@@ -1,0 +1,39 @@
+//1. Leia uma matriz 4 x 4, conte e escreva quantos valores maiores que 10 ela possui
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define tam 4
+
+int main(){
+	
+	srand(time(NULL));
+		
+	int m1[tam][tam], i, j, count=0;
+	
+	
+	for (i=0; i< tam; i++){
+		for (j=0; j< tam; j++){
+			m1[i][j] = rand()%100;
+		}
+	}
+	for(i=0; i<tam; i++){
+		for(j=0; j<tam; j++){
+			printf("%d ", m1[i][j]);
+		}
+		printf("\n");
+	}
+	printf("\n");
+	
+	for(i=0; i<tam; i++){
+		for(j=0; j<tam; j++){
+			if (m1[i][j] > 10){
+				count ++;
+			}
+		}
+	}
+	printf("Foram inseridos %d valores maiores que 10.", count);
+		
+	return 0;
+}

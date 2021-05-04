@@ -1,0 +1,29 @@
+/*2. Declare uma matriz 5 x 5. Preencha com 1 a diagonal principal e com 0 os demais 
+elementos. Escreva ao final a matriz obtida.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define tam 5
+
+int main(){
+	
+	int m[tam][tam], l, c;
+	
+	for (l=0; l<tam; l++){
+		for (c=0; c< tam; c++){
+			if (l==c)
+				m[l][c] = 1;
+			else
+				m[l][c] = 0;		
+		}
+	}
+	for (l=0; l<tam; l++){
+		for (c=0; c< tam; c++){
+			printf("%d ", m[l][c]);
+		}
+		printf("\n");
+	}
+	
+	return 0;
+}

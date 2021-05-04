@@ -1,0 +1,28 @@
+/*3. Faça um programa que preenche uma matriz 4 x 4 com o produto do valor da linha e da 
+coluna de cada elemento. Em seguida, imprima na tela a matriz*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define tam 4
+
+int main(){
+	
+	int m[tam][tam], l, c, prod;
+	
+	for(l=0; l<tam; l++){
+		for (c=0; c<tam; c++){
+			m[l][c] = l*c;
+		}
+		printf("\n");
+	}
+	
+	for(l=0; l<tam; l++){
+		for (c=0; c<tam; c++){
+			printf("%d ", m[l][c]);
+		}
+		printf("\n");
+	}
+	
+	return 0;
+}
