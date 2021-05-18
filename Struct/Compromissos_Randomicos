@@ -42,11 +42,7 @@ int main(){
 		for (i=0; i < vt; i ++){
 			agenda[i].dd = 1 + (rand()%20);
 			agenda[i].mm = 1 + (rand()%12);
-			
-			do{
-				agenda[i].aa = rand()%2019;
-			}while(agenda[i].aa<2016 || agenda[i].aa>2019);
-					
+			agenda[i].aa = 2016 + (rand()%3);
 			agenda[i].hh = rand() % 23;
 			agenda[i].mi = rand() % 59;
 			agenda[i].ss = rand() % 59;
